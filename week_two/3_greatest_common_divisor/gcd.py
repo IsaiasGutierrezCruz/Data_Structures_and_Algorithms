@@ -1,4 +1,4 @@
-# Uses python3
+# uses python3
 import sys
 
 def gcd_naive(a, b):

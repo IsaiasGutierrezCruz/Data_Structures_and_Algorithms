@@ -1,5 +1,3 @@
-// by Alexander Nikolskiy
-
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -15,7 +13,14 @@ function readLine(line) {
 }
 
 function fib(n) {
-    // write your code here
+    let numbersFibonacci = [0, 1];
+    if (n >= 2) {
+        for (let i = 2; i <= n + 1; i++){
+            numbersFibonacci.push((numbersFibonacci[i - 1] +
+                numbersFibonacci[i - 2]) % 10);
+        }
+    }
+    return numbersFibonacci[n]
 }
 
 module.exports = fib;

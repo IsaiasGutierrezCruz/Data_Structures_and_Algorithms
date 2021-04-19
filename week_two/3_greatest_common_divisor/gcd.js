@@ -18,7 +18,10 @@ function readLine(line) {
 }
 
 function gcd(a, b) {
-    // write your code here
+    if (b === 0){
+        return a
+    }
+    return gcd(b, a%b);
 }
 
 module.exports = gcd;
